@@ -26,7 +26,7 @@ def signup():
     # Generate the 6-digit OTP for the user
     otp = generate_otp(hashed_key)
 
-    return jsonify({"message": "OTP created successfully", "otp": otp}), 200
+    return jsonify({"message": "Key & OTP created successfully", "key": key}), 200
 
 @otp_blueprint.route('/login', methods=['POST'])
 def login():
